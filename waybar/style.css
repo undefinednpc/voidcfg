@@ -1,0 +1,39 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrains Mono;
+    font-size: 14px;
+    min-height: 30px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+#mode, #clock, #battery, #language, #network {
+    padding: 0 12px;
+}
+
+#battery.charging {
+    color: #AFE1AF;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+}
+
+#workspaces button.focused {
+    background: #ffffff;
+    color: #000000;
+}
+
+#network.disconnected {
+    color: #CD0000;
+}
+
+#network {
+    color: #AFE1AF;
+}

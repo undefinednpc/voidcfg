@@ -1,0 +1,64 @@
+# theming
+gaps inner 16
+gaps outer 12
+default_border pixel 4
+default_floating_border pixel 4
+client.focused #9F586A #9F586A #9F586A #9F586A
+output * bg /home/undefinednpc/walls/lain.jpg fill
+
+# hdmi
+workspace 2 output HDMI-A-1
+
+# keybinds
+set $mod Mod4
+set $left h
+set $down j 
+set $right l 
+set $up k 
+set $term alacritty
+floating_modifier $mod normal
+focus_follows_mouse yes
+
+bindsym $mod+t exec $term
+bindsym $mod+b exec firefox-wayland
+bindsym Print exec grim
+bindsym $mod+Print exec grim -g "$(slurp)"
+
+bindsym $mod+q kill
+bindsym $mod+Shift+r reload
+
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+bindsym $mod+h splith
+bindsym $mod+v splitv
+
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+
+# bar
+bar {
+	swaybar_command waybar
+}
+
+# input
+input * {
+	xkb_layout "us, cz"
+	xkb_options "grp:win_space_toggle"
+	repeat_delay 200
+	repeat_rate 50
+}
+
+input 1267:12433:ELAN0504:00_04F3:3091_Touchpad {
+	tap enabled
+}
