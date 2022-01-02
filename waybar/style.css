@@ -26,8 +26,8 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    background: #ffffff;
-    color: #000000;
+    background: #9F586A;
+    color: #ffffff;
 }
 
 #network.disconnected {

@@ -1,6 +1,6 @@
 # theming
 gaps inner 16
-gaps outer 12
+gaps outer 8
 default_border pixel 4
 default_floating_border pixel 4
 client.focused #9F586A #9F586A #9F586A #9F586A
@@ -33,6 +33,8 @@ bindsym $mod+3 workspace number 3
 bindsym $mod+Shift+1 move container to workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2
 bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+s move container to scratchpad
+bindsym $mod+Shift+s scratchpad show
 
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
